@@ -116,6 +116,7 @@ def test_profile_summary():
 
 
 @pytest.mark.benchmark
+# TODO(woosuk): Support ROCm and re-enable this test there.
 @pytest.mark.skipif(
     current_platform.is_rocm(), reason="Hangs on ROCm; the bench is CUDA-only."
 )
